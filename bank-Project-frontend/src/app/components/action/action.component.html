@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th scope="col">Bank Id</th>
+        <th scope="col">Bank Name</th>
+        <th scope="col" >Address</th>
+        <th scope="col">Action</th>
+        <!-- <th></th>
+        <th></th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bank of banks">
+        <td>{{bank.bankId}}</td>
+        <td>{{bank.bankName}}</td>
+        <td>{{bank.address}}</td>
+        <td>
+          <button class="btn btn-danger action-button" (click)="deleteRecord(bank.bankId)">Delete</button>
+          <button class="btn btn-primary action-button" (click)="viewDetails(bank.bankId)">View Details</button>
+          <button class="btn btn-primary action-button" (click)="updateBankDetails(bank.bankId)">Update Details</button>
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>

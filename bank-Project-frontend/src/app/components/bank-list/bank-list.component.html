@@ -1,0 +1,18 @@
+<div class="table-container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th scope="col">Bank Id</th>
+        <th scope="col">Bank Name</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bank of banks">
+        <td>{{bank.bankId}}</td>
+        <td>{{bank.bankName}}</td>
+        <td>{{bank.address}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
