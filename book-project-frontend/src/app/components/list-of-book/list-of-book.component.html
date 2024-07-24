@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Book Id</th>
+      <th scope="col">Book Name</th>
+      
+      <th scope="col">Book Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of books">
+      <td>{{b.bookId}}</td>
+      <td>{{b.bookName}}</td>
+      <td>{{b.price}}</td>
+      <td>
+
+        <button class="btn btn-danger btn-sm" (click)="deleteBooks(b.bookId)">
+          Delete
+        </button>
+      </td>
+      <td>
+
+        <button class="btn btn-danger btn-sm" (click)="updateBooks(b.bookId)">
+          update
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
